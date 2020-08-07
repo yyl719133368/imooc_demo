@@ -1,0 +1,13 @@
+/* LoginRequest represents a login request
+ * user_name: user name 
+ * password: password 
+ * retry_time: retry times, can not over 3 times */
+ 
+syntax = "proto3";  // proto3 syntax
+option go_package = "/pb/request";
+
+message LoginRequest {
+  string user_name = 1;
+  string password = 2;
+  int32 retry_times = 3;
+}
